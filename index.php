@@ -20,7 +20,7 @@ if($fn && $ln && $email && $password)
 {
   if($password == $password2)
   {
-    $query = mysqli_query($con, "INSERT INTO users VALUES('', '$fn', '$ln', '$email', '$password','$d', '0')");
+    $query = mysqli_query($con, "INSERT INTO users VALUES('', '$fn', '$ln', '$email', '$password','$d', '0','','')");
   }
 }
 ?>
@@ -59,13 +59,13 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
       <div class="left">
         <h2>Sign Up </h2>
-        <form action= "#"method="POST">
+        <form action= "#" method="POST">
           <input type = "text" name="fname"  placeholder="First Name"/>
           <input type = "text" name="lname" placeholder="Last Name"/>
           <input type = "text" name="mail" placeholder="E-mail"/>
           <input type = "text" name="pass1" placeholder="Password"/>
           <input type = "text" name="pass2" placeholder="Repeat Password"/> <br/>
-          <input type="submit" name = "submit" value= " submit "/>
+          <input type="submit" name = "sign_up" value= "sign up" />
         </form>
 
       </div>
